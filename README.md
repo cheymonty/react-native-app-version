@@ -11,11 +11,11 @@ npm install react-native-build-version
 ## Usage
 
 ```js
-import { multiply } from 'react-native-build-version';
+import { getAppVersion } from 'react-native-build-version';
 
 // ...
 
-const result = await multiply(3, 7);
+const appVersion = await getAppVersion();
 ```
 
 ## Contributing

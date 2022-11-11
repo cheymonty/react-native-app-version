@@ -1,18 +1,18 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-build-version';
+import { getAppVersion } from 'react-native-build-version';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [appVersion, setAppVersion] = React.useState<string | undefined>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    getAppVersion().then(setAppVersion);
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>App Version: {appVersion}</Text>
     </View>
   );
 }

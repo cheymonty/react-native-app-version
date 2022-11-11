@@ -6,7 +6,7 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
-const BuildVersion = NativeModules.BuildVersion
+const RCTBuildVersion = NativeModules.BuildVersion
   ? NativeModules.BuildVersion
   : new Proxy(
       {},
@@ -17,6 +17,6 @@ const BuildVersion = NativeModules.BuildVersion
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return BuildVersion.multiply(a, b);
+export function getAppVersion(): Promise<string> {
+  return RCTBuildVersion.getAppVersion();
 }
