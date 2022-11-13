@@ -1,5 +1,5 @@
 {
-  "name": "react-native-build-version",
+  "name": "react-native-app-version",
   "version": "0.1.0",
   "description": "test",
   "main": "lib/commonjs/index",
@@ -41,13 +41,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/cheymonty/react-native-build-version",
+  "repository": "https://github.com/cheymonty/react-native-app-version",
   "author": "Cheyenne Montgomery <chey.monty@gmail.com> (https://github.com/cheymonty)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cheymonty/react-native-build-version/issues"
+    "url": "https://github.com/cheymonty/react-native-app-version/issues"
   },
-  "homepage": "https://github.com/cheymonty/react-native-build-version#readme",
+  "homepage": "https://github.com/cheymonty/react-native-app-version#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

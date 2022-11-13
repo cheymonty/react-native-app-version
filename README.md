@@ -1,21 +1,21 @@
-# react-native-build-version
+# react-native-app-version
 
-Get version information of a React Native app
+Get app version and build number of your React Native app
 
 ## Installation
 
 ```sh
-npm install react-native-build-version
+npm install react-native-app-version
 ```
 
 ## Usage
 
 ```js
-import { getAppVersion } from 'react-native-build-version';
+import { getAppVersion } from 'react-native-app-version';
 
 // ...
 
-const appVersion = await getAppVersion(); // 1.0
+const appVersion = await getAppVersion(); //1.0
 ```
 
 ## Contributing
