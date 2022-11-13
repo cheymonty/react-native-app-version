@@ -2,7 +2,6 @@ package com.appversion;
 
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -26,9 +25,6 @@ public class AppVersionModule extends ReactContextBaseJavaModule {
     return NAME;
   }
 
-
-  // Example method
-  // See https://reactnative.dev/docs/native-modules-android
   @ReactMethod
   public void getAppVersion(Promise promise) {
     ReactApplicationContext context = getReactApplicationContext();
@@ -40,5 +36,19 @@ public class AppVersionModule extends ReactContextBaseJavaModule {
       e.printStackTrace();
     }
     promise.resolve(version);
+  }
+
+  @ReactMethod
+  public void getBuildNumber(Promise promise) {
+    ReactApplicationContext context = getReactApplicationContext();
+    int build = 0;
+    try {
+      PackageInfo pInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
+      build = pInfo.versionCode;
+    } catch (PackageManager.NameNotFoundException e) {
+      e.printStackTrace();
+    }
+    // change to a string to be consistent with iOS
+    promise.resolve(Integer.toString(build));
   }
 }

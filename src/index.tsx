@@ -20,3 +20,7 @@ const RCTAppVersion = NativeModules.AppVersion
 export function getAppVersion(): Promise<string> {
   return RCTAppVersion.getAppVersion();
 }
+
+export function getBuildNumber(): Promise<string> {
+  return RCTAppVersion.getBuildNumber();
+}
