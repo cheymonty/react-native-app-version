@@ -53,9 +53,9 @@ Remember to add tests for your change if possible. Run the unit tests by:
 yarn test
 ```
 
-To edit the Objective-C or Swift files, open `example/ios/BuildVersionExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > react-native-build-version`.
+To edit the Objective-C or Swift files, open `example/ios/AppVersionExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > react-native-app-version`.
 
-To edit the Java or Kotlin files, open `example/android` in Android studio and find the source files at `react-native-build-version` under `Android`.
+To edit the Java or Kotlin files, open `example/android` in Android studio and find the source files at `react-native-app-version` under `Android`.
 
 
 ### Commit message convention

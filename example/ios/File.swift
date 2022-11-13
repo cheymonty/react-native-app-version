@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  BuildVersionExample
+//  AppVersionExample
 //
 
 import Foundation

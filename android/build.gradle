@@ -20,11 +20,11 @@ if (isNewArchitectureEnabled()) {
 }
 
 def getExtOrDefault(name) {
-  return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties['BuildVersion_' + name]
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties['AppVersion_' + name]
 }
 
 def getExtOrIntegerDefault(name) {
-  return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties['BuildVersion_' + name]).toInteger()
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties['AppVersion_' + name]).toInteger()
 }
 
 android {
@@ -132,7 +132,7 @@ dependencies {
 if (isNewArchitectureEnabled()) {
   react {
     jsRootDir = file("../src/")
-    libraryName = "BuildVersion"
-    codegenJavaPackageName = "com.buildversion"
+    libraryName = "AppVersion"
+    codegenJavaPackageName = "com.appversion"
   }
 }

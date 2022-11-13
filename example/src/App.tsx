@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { getAppVersion } from 'react-native-build-version';
+import { getAppVersion } from 'react-native-app-version';
 
 export default function App() {
   const [appVersion, setAppVersion] = React.useState<string | undefined>();
@@ -22,10 +22,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
   },
 });
