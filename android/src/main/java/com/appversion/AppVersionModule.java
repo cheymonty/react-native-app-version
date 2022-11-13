@@ -2,6 +2,7 @@ package com.appversion;
 
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -37,7 +38,6 @@ public class AppVersionModule extends ReactContextBaseJavaModule {
       version = pInfo.versionName;
     } catch (PackageManager.NameNotFoundException e) {
       e.printStackTrace();
-      version = "err";
     }
     promise.resolve(version);
   }
