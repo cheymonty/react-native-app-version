@@ -33,7 +33,7 @@ public class AppVersionModule extends ReactContextBaseJavaModule {
       PackageInfo pInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
       version = pInfo.versionName;
     } catch (PackageManager.NameNotFoundException e) {
-      e.printStackTrace();
+      promise.reject(e);
     }
     promise.resolve(version);
   }
@@ -46,7 +46,7 @@ public class AppVersionModule extends ReactContextBaseJavaModule {
       PackageInfo pInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
       build = pInfo.versionCode;
     } catch (PackageManager.NameNotFoundException e) {
-      e.printStackTrace();
+      promise.reject(e);
     }
     // change to a string to be consistent with iOS
     promise.resolve(Integer.toString(build));
