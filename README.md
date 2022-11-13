@@ -10,12 +10,13 @@ npm install react-native-app-version
 
 ## Usage
 
-```js
-import { getAppVersion } from 'react-native-app-version';
+```ts
+import { getAppVersion, getBuildNumber } from 'react-native-app-version';
 
 // ...
 
-const appVersion = await getAppVersion(); //1.0
+const appVersion: string = await getAppVersion(); // 1.0
+const buildNumber: string = await getBuildNumber(); // 1
 ```
 
 ## Contributing

@@ -3,14 +3,20 @@
 @implementation AppVersion
 RCT_EXPORT_MODULE()
 
-// Example method
-// See // https://reactnative.dev/docs/native-modules-ios
 RCT_REMAP_METHOD(getAppVersion,
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
+                 appVersionResolver:(RCTPromiseResolveBlock)resolve
+                 appVersionRejecter:(RCTPromiseRejectBlock)reject)
 {
     NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
     resolve(version);
+}
+
+RCT_REMAP_METHOD(getBuildNumber,
+                 buildNumberResolver:(RCTPromiseResolveBlock)resolve
+                 buildNumberRejecter:(RCTPromiseRejectBlock)reject)
+{
+    NSString *buildNumber = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleVersion"];
+    resolve(buildNumber);
 }
 
 // Don't compile this code when we build for the old architecture.
