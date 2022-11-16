@@ -5,7 +5,7 @@ Get app version and build number of your React Native app
 ## Installation
 
 ```sh
-npm install @cheymonty/react-native-app-version
+npm install @cheydev/react-native-app-version
 ```
 
 Run `pod install` in the iOS directory
@@ -17,7 +17,10 @@ cd ios && pod install
 ## Usage
 
 ```ts
-import { getAppVersion, getBuildNumber } from 'react-native-app-version';
+import {
+  getAppVersion,
+  getBuildNumber,
+} from '@cheydev/react-native-app-version';
 
 // ...
 
