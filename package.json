@@ -1,5 +1,5 @@
 {
-  "name": "react-native-app-version",
+  "name": "@cheymonty/react-native-app-version",
   "version": "0.1.0",
   "description": "test",
   "main": "lib/commonjs/index",
