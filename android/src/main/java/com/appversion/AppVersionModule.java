@@ -28,27 +28,24 @@ public class AppVersionModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void getAppVersion(Promise promise) {
     ReactApplicationContext context = getReactApplicationContext();
-    String version = "";
     try {
       PackageInfo pInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
-      version = pInfo.versionName;
+      String version = pInfo.versionName;
+      promise.resolve(version);
     } catch (PackageManager.NameNotFoundException e) {
       promise.reject(e);
     }
-    promise.resolve(version);
   }
 
   @ReactMethod
   public void getBuildNumber(Promise promise) {
     ReactApplicationContext context = getReactApplicationContext();
-    int build = 0;
     try {
       PackageInfo pInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
-      build = pInfo.versionCode;
+      int build = pInfo.versionCode;
+      promise.resolve(Integer.toString(build)); // change to string to be consistent with iOS
     } catch (PackageManager.NameNotFoundException e) {
       promise.reject(e);
     }
-    // change to a string to be consistent with iOS
-    promise.resolve(Integer.toString(build));
   }
 }
