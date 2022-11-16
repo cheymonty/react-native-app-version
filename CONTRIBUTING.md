@@ -55,7 +55,7 @@ yarn test
 
 To edit the Objective-C or Swift files, open `example/ios/AppVersionExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > react-native-app-version`.
 
-To edit the Java or Kotlin files, open `example/android` in Android studio and find the source files at `@cheydev/react-native-app-version` under `Android`.
+To edit the Java or Kotlin files, open `example/android` in Android studio and find the source files at `react-native-app-version` under `Android`.
 
 ### Commit message convention
 
